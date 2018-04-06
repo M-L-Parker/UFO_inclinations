@@ -28,15 +28,15 @@ def run_mc(sources,N):
 	print 'P-value:',s[1]
 
 	# Using log(v), gives a more normal distribution...
-	ax1=pl.subplot(121)
-	pl.hist(np.log10(vs))
+	# ax1=pl.subplot(121)
+	# pl.hist(np.log10(vs))
 	logv_mean=np.mean(np.log10(vs))
 	logv_std=np.std(np.log10(vs))
 	print '\nMean log(v):',logv_mean
 	print 'Standard deviation:',logv_std
 
-	ax2=pl.subplot(122)
-	pl.hist(points)
+	# ax2=pl.subplot(122)
+	# pl.hist(points)
 	i_mean=np.mean(points)
 	i_std=np.std(points)
 	print '\nMean i:',i_mean
@@ -63,14 +63,20 @@ def run_mc(sources,N):
 	print N_s,'of %s simulations exceeded Spearman r value of %s' %(str(N),str(s[0]))
 	print 'P =',round_sigfigs(float(N_s)/float(N),3)
 
-	fig2=pl.figure()
+	fig2=pl.figure(figsize=(8,5))
 	ax1=pl.subplot(121)
-	pl.hist([abs(x) for x in pearsonr_sims])
+	ax1.set_label('N')
+	ax1.set_xlabel('Pearson r')
+	ax1.set_xlim(0,1)
+	pl.hist([abs(x) for x in pearsonr_sims],bins=100)
 	ax2=pl.subplot(122)
-	pl.hist([abs(x) for x in spearmanr_sims])
-	pl.savefig('sim_coeff_distributions.pdf',bbox_inches='tight')
+	ax2.set_xlim(0,1)
+	ax2.set_label('N')
+	ax2.set_xlabel('Spearman r')
+	pl.hist([abs(x) for x in spearmanr_sims],bins=100)
+	# pl.savefig('sim_coeff_distributions.pdf',bbox_inches='tight')
 
-	# pl.show()
+	pl.show()
 
 
 
@@ -79,30 +85,32 @@ def run_mc(sources,N):
 
 # Load data from file and get list of source names:
 # ufo_data=load_data('data.tsv')
-ufo_data=load_data('data_noPDS456.tsv')
-source_names=get_sourcenames(ufo_data)
+if __name__ == '__main__':
 
-# Define a Source object for each source name
-sources={}
-for sname in source_names:
-	sources[sname]=Source(sname)
+	ufo_data=load_data('data.tsv')
+	source_names=get_sourcenames(ufo_data)
 
-for sname in sources:
+	# Define a Source object for each source name
+	sources={}
+	for sname in source_names:
+		sources[sname]=Source(sname)
 
-	print '\nAnalysing',sname
-	source=sources[sname]
-	source_data=get_source_data(ufo_data,sname)
-	for record in source_data:
-		velocity_temp,err_temp,ref_temp=parse_ufo_data(record)
-		source.add_ufo(velocity_temp,err_temp,ref_temp)
-		if not source.has_reflection:
-			i_temp,err_temp,ref_temp,qc=parse_refl_data(record)
-			source.add_refl(i_temp,err_temp,ref_temp,qc)
-			print 'Reflection loaded'
-			source.display_refl()
+	for sname in sources:
 
-	print source.n_ufos,'UFOs loaded'
-	source.consolidate_ufos()
-	source.display_ufos()
+		print '\nAnalysing',sname
+		source=sources[sname]
+		source_data=get_source_data(ufo_data,sname)
+		for record in source_data:
+			velocity_temp,err_temp,ref_temp=parse_ufo_data(record)
+			source.add_ufo(velocity_temp,err_temp,ref_temp)
+			if not source.has_reflection:
+				i_temp,err_temp,ref_temp,qc=parse_refl_data(record)
+				source.add_refl(i_temp,err_temp,ref_temp,qc)
+				print 'Reflection loaded'
+				source.display_refl()
 
-run_mc(sources,50000)
+		print source.n_ufos,'UFOs loaded'
+		source.consolidate_ufos()
+		source.display_ufos()
+
+	run_mc(sources,50000)

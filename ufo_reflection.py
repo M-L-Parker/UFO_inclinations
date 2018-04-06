@@ -302,7 +302,7 @@ def plot_relation(sources,filename='UFO_relation.pdf'):
 
 	# Plot normal points:
 	pl.clf()
-	fig=pl.figure()
+	fig=pl.figure(figsize=(6,6))
 	ax1=pl.subplot(111)
 	ax1.set_xlim(0,0.5)
 	ax1.set_ylim(0,75)
@@ -338,12 +338,11 @@ def plot_relation(sources,filename='UFO_relation.pdf'):
 	pl.fill_between(xs,means+std_devs,means-std_devs,color='dodgerblue',alpha=0.3)
 
 	inclinations=np.linspace(0,90,180)
-	# pl.plot(cone(0.4,inclinations),inclinations,color='r',label='cone',lw=1)
-	# pl.plot(slab(0.4,inclinations),inclinations,color='forestgreen',label='slab',lw=1)
 
-	pl.savefig(filename,bbox_inches='tight')
 	# pl.show()
-	print 'Saved to',filename	
+	# pl.savefig(filename,bbox_inches='tight')
+	# pl.show()
+	# print 'Saved to',filename	
 
 def load_sources(data_file):
 	ufo_data=load_data('data.tsv')
