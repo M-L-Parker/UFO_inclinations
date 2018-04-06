@@ -302,26 +302,26 @@ def plot_relation(sources,filename='UFO_relation.pdf'):
 
 	# Plot normal points:
 	pl.clf()
-	fig=pl.figure(figsize=(6,6))
+	fig=pl.figure(figsize=(6,5))
 	ax1=pl.subplot(111)
-	ax1.set_xlim(0,0.5)
-	ax1.set_ylim(0,75)
-	ax1.set_ylabel('Inclination (degrees)')
+	ax1.set_ylim(0,0.5)
+	ax1.set_xlim(0,75)
+	ax1.set_xlabel('Inclination (degrees)')
 	# ax1.set_xscale('log')
-	ax1.set_xlabel('UFO velocity (c)')
-	pl.errorbar(vs,points,errs.T,v_errs.T,ls='none',lw=1,color='k')
+	ax1.set_ylabel('UFO velocity (c)')
+	pl.errorbar(points,vs,v_errs.T,errs.T,ls='none',lw=1,color='k')
 
 	# Plot upper limits:
 	if len(ulims)>0:
-		pl.errorbar(ulim_vs,ulims,0,ulim_v_errs,ls='none',lw=1,color='k')
+		pl.errorbar(ulims,ulim_vs,ulim_v_errs,0,ls='none',lw=1,color='k')
 
-		pl.errorbar(ulim_vs, ulims, 5, uplims=True,ls='none',lw=1,color='k')
+		pl.errorbar(ulims, ulim_vs,0, 5, xuplims=True,ls='none',lw=1,color='k')
 
 	
 	# print a,b, aerr, berr
 	# print new_sample
 	# print [0.,b],[0.5,0.5*a+b]
-	ax1.plot([0.,0.5],[b,0.5*a+b],color='dodgerblue')
+	ax1.plot([b,0.5*a+b],[0.,0.5],color='dodgerblue')
 	xs=np.linspace(0,0.5,201)
 	max_is=[]
 	min_is=[]
@@ -335,9 +335,9 @@ def plot_relation(sources,filename='UFO_relation.pdf'):
 		means.append(np.mean(ys))
 	std_devs=np.array(std_devs)
 	means=np.array(means)
-	pl.fill_between(xs,means+std_devs,means-std_devs,color='dodgerblue',alpha=0.3)
+	pl.fill_betweenx(xs,means+std_devs,means-std_devs,color='dodgerblue',alpha=0.3)
 
-	inclinations=np.linspace(0,90,180)
+	# inclinations=np.linspace(0,90,180)
 
 	# pl.show()
 	# pl.savefig(filename,bbox_inches='tight')
@@ -379,6 +379,7 @@ def main():
 
 	# Get points and upper limits for all sources
 	plot_relation(sources)
+	pl.savefig('test.pdf',bbox_inches='tight')
 
 	pass
 
