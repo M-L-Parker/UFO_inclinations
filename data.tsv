@@ -18,42 +18,41 @@ PDS 456	4.3	0.3	0.46	0.02	0.02		Reeves+18	>0.99	65	2	2	Chiang+17	y	9.4+/-0.3	Ree
 PG 1211+143	2.9	0.2	0.057	0.001	0.001		Danehkar+17	>0.97	44	2	2	Lobban+16	y	8.2	Peterson+04			Disagreement in spin with Zoghbi, Mass error?
 PG 1211+143			0.066	0.003	0.003		Pounds+16	>0.97	44	2	2	Lobban+16	y	8.2	Peterson+04			
 PG 1211+143			0.129	0.002	0.002		Pounds+16	>0.97	44	2	2	Lobban+16	y	8.2	Peterson+04			
-PG 1211+143			0.151	0.003	0.003		Tombesi+11	>0.97	44	2	2	Lobban+16	y	8.2	Peterson+04			
+PG 1211+143			0.151	0.003	0.003		Tombesi+11a	>0.97	44	2	2	Lobban+16	y	8.2	Peterson+04			
 PG 1211+143			0.062	0.001	0.001		Reeves+18b	>0.97	44	2	2	Lobban+16	y	8.2	Peterson+04			
-NGC 4151	4.41	0.5	0.106	0.007	0.007	>2	Tombesi+11	0.98+/-0.01	0	10	0	Keck+15, Beuchert+17	y	7.1	Peterson+04			Mass error?
+NGC 4151	4.41	0.5	0.106	0.007	0.007	>2	Tombesi+11a	0.98+/-0.01	0	10	0	Keck+15, Beuchert+17	y	7.1	Peterson+04			Mass error?
 NGC 4151			0.043	0.006	0.016		Patrick+12	0.98+/-0.01	0	10	0	Keck+15, Beuchert+17	y					
 NGC 4151			0.055	0.023	0.023		Gofford+13	0.98+/-0.01	0	10	0	Keck+15, Beuchert+17	y					
-NGC 3783	2.1	0.1	0.01	0.005	0.005	2.3+/-0.1	Tombesi+11	>0.88	22	3	8	Brenneman+11	y	7.5	Peterson+04			Too slow
-Mrk 509	5	1	0.173	0.004	0.004		Tombesi+11	0.36+0.2-0.37	50	5	3	Walton+13	y	8.1	Peterson+04			
-Mrk 509	5	1	0.138	0.004	0.004	>6	Tombesi+11	0.36+0.2-0.37	50	5	3	Walton+13	y	8.1	Peterson+04			
-Mrk 509	5	1	0.217	0.024	0.024	>0.7	Tombesi+11	0.36+0.2-0.37	50	5	3	Walton+13	y	8.1	Peterson+04			
+NGC 3783	2.1	0.1	0.01	0.005	0.005	2.3+/-0.1	Tombesi+11a	>0.88	22	3	8	Brenneman+11	y	7.5	Peterson+04			Too slow
+Mrk 509	5	1	0.173	0.004	0.004		Tombesi+11a	0.36+0.2-0.37	50	5	3	Walton+13	y	8.1	Peterson+04			
+Mrk 509	5	1	0.138	0.004	0.004	>6	Tombesi+11a	0.36+0.2-0.37	50	5	3	Walton+13	y	8.1	Peterson+04			
+Mrk 509	5	1	0.217	0.024	0.024	>0.7	Tombesi+11a	0.36+0.2-0.37	50	5	3	Walton+13	y	8.1	Peterson+04			
 Mrk 509			0.172	0.005	0.005		Cappi+09	0.36+0.2-0.37	50	5	3	Walton+13	y	8.1	Peterson+04			
 Mrk 509			0.162	0.009	0.009		Cappi+09	0.36+0.2-0.37	50	5	3	Walton+13	y	8.1	Peterson+04			
 Mrk 509			0.141	0.003	0.003		Cappi+09	0.36+0.2-0.37	50	5	3	Walton+13	y	8.1	Peterson+04			
 Mrk 509			0.196	0.005	0.005		Cappi+09	0.36+0.2-0.37	50	5	3	Walton+13	y	8.1	Peterson+04			
 Mrk 509			0.17	0.02	0.01		Cappi+09	0.36+0.2-0.37	50	5	3	Walton+13	y	8.1	Peterson+04			
-Ark 120	4.6	1.3	0.29	0.02	0.02	>0.7	Tombesi+11	0.7+/-0.1	45	5	2	Garcia+14	y	8.2	Peterson+04			
-Mrk 79	4.2	0.2	0.092	0.004	0.004	19+/-12	Tombesi+11	0.7+/-1	24	1	1	Gallo+11	y					
+Ark 120	4.6	1.3	0.29	0.02	0.02	>0.7	Tombesi+11a	0.7+/-0.1	45	5	2	Garcia+14	y	8.2	Peterson+04			
+Mrk 79	4.2	0.2	0.092	0.004	0.004	19+/-12	Tombesi+11a	0.7+/-1	24	1	1	Gallo+11	y					
 IRAS 13349+2438	4.3	0.1	0.13	0.01	0.01	50+/-3	Parker+18	>0.97	48	2	1	Parker+18	y					
-NGC 4051	4.4	1.5	0.202	0.006	0.006	5+/-1	Tombesi+11	>0.99	37	5	5	Patrick+12/Risaliti+?	y					Check with Guido for NuSTAR constraint
-NGC 4051	4.4	1.5	0.037	0.025	0.025	5+/-1	Tombesi+11	>0.99	37	5	5	Patrick+12/Risaliti+?	y					Check with Guido for NuSTAR constraint
+NGC 4051	4.4	1.5	0.202	0.006	0.006	5+/-1	Tombesi+11a	>0.99	37	5	5	Patrick+12/Risaliti+?	y					Check with Guido for NuSTAR constraint
+NGC 4051	4.4	1.5	0.037	0.025	0.025	5+/-1	Tombesi+11a	>0.99	37	5	5	Patrick+12/Risaliti+?	y					Check with Guido for NuSTAR constraint
 NGC 4051	3.5	0.5	0.018	0.003	0.005	5+/-1	Gofford+13	>0.99	37	5	5	Patrick+12/Risaliti+?	y					
-Mrk 841	3.91	1.24	0.055	0.025	0.025	>1	Tombesi+11	>0.52	46	6	5	Walton+13	y					
-1H 0419-577	3.69	0.53	0.079	0.007	0.007	17.3+/-14/4	Tombesi+11	>0.89	49	7	4	Walton+13	y					
-MCG-5-23-16	4.33	0.08	0.116	0.004	0.004	4+/-1.2	Tombesi+11	0+/-1	51	7	7	Zoghbi+17	y					
+Mrk 841	3.91	1.24	0.055	0.025	0.025	>1	Tombesi+11a	>0.52	46	6	5	Walton+13	y					
+1H 0419-577	3.69	0.53	0.079	0.007	0.007	17.3+/-14/4	Tombesi+11a	>0.89	49	7	4	Walton+13	y					
+MCG-5-23-16	4.33	0.08	0.116	0.004	0.004	4+/-1.2	Tombesi+11a	0+/-1	51	7	7	Zoghbi+17	y					
 3C 111	4.45	0.4	0.106	0.006	0.006	10+/-8	Tombesi+11b	0+/-1	44	2	2	Tombesi+11b	n					Assuming 6.4 keV line
 3C 111			0.072	0.041	0.038		Gofford+13	0+/-1	44	2	2	Tombesi+11b	n					
-3C 390.3	>5.46		0.145	0.007	0.007	>50	Gofford+13	0+/-1	35	0	0	Walton+13, Giovannini+01	n					i not allowed to vary
 MCG-6-30-15	3.64	0.06	0.007	0.002	0.002	1	Gofford+13	0.91+/-0.07	33	3	3	Marinucci+14	y					
 MR 2251-178	3.26	0.12	0.137	0.008	0.008	0.3+/-0.1	Gofford+13	0+/-1	24	3	5	Nardini+14	y					
 Mrk 766	3.86	0.3	0.039	0.03	0.03	8+/-3	Gofford+13	0+/-1	39	6	3	Buisson+	y					
-Mrk 766	4	1	0.082	0.006	0.006	5+/-3	Tombesi+11	0+/-1	39	6	3	Buisson+	y					
+Mrk 766	4	1	0.082	0.006	0.006	5+/-3	Tombesi+11a	0+/-1	39	6	3	Buisson+	y					
 NGC 1365	3.88	0.07	0.008	0.001	0.001		Risaliti+?	>0.97	65	5	5	Walton+14	y					Check for velocity measurement
 NGC 3516	3.84	0.11	0.004	0.002	0.002	4+/-2	Gofford+13	<0.3	0	20	0	Patrick+12	n					Upper limit on i, check other stuff, too slow
-NGC 3516			0.01	0.002	0.0002		Tombesi+11	<0.3	0	20	0	Patrick+12	n					Too slow
+NGC 3516			0.01	0.002	0.0002		Tombesi+11a	<0.3	0	20	0	Patrick+12	n					Too slow
 NGC 5506	5.04	0.3	0.246	0.006	0.006	10+/-5	Gofford+13	0+/-1	41	0.1	0.2	Sun+17	y					
 Swift J2127	4.16	0.2	0.231	0.006	0.006	7	Gofford+13	0.6+/-2	49	2	2	Marinucci+14b	y					
 1H 0707+495			0.18	0.02	0.02		Hagino+16	0.97+/-0.03	43	2	2	Kara+15	y					
 1H 0707+495			0.11	0.01	0.02		Dauser+12	0.97+/-0.03	43	2	2	Kara+15	y					
 1H 0707+495			0.18	0.01	0.01		Dauser+12	0.97+/-0.03	43	2	2	Kara+15	y					
-IC 4329A			0.098	0.004	0.004		Tombesi+11		35	5	5	Mantovani+14	n					
+IC 4329A			0.098	0.004	0.004		Tombesi+11a		35	5	5	Mantovani+14	n					
