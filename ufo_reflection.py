@@ -40,12 +40,15 @@ class ufo_record():
 			self.error=(float(error),float(error))
 		self.reference=str(reference)
 	def latex_print(self):
-		v_str=str(v)
+		v_str='$'+str(round_sigfigs(self.velocity,3))
 		if self.error[0]==self.error[1]:
-			err_str='\pm'+str(self.error[0])
+			err_str='\pm'+str(round_sigfigs(self.error[0],2))
 		else:
-			err_str='^{+'+str(self.error[0])+'}_{-'+str(self.error[1])+'}'
-		out_str=v_str+err_str+'\t&\t'+self.reference
+			err_str='^{+'+str(round_sigfigs(self.error[0],2))+'}_{-'+str(round_sigfigs(self.error[1],2))+'}'
+		ref_str='; '.join([x[0]+x.split('+')[-1] for x in self.reference.split('; ')])
+		# ref_str='\citet{'+'}; \citet{'.join([x.split('+')[0]+x.split('+')[-1] for x in self.reference.split('; ')])+'}'
+		out_str=v_str+err_str+'$\t&\t'+ref_str
+		return out_str
 
 		
 class reflection_record():
@@ -62,6 +65,17 @@ class reflection_record():
 				self.error=(float(error[0]),float(error[1]))
 		else:
 			self.error=(float(error),float(error))
+
+	def latex_print(self):
+		i_str='$'+str(round_sigfigs(self.inclination,3))
+		if self.error[0]==self.error[1]:
+			err_str='\pm'+str(round_sigfigs(self.error[0],2))
+		else:
+			err_str='^{+'+str(round_sigfigs(self.error[0],2))+'}_{-'+str(round_sigfigs(self.error[1],2))+'}'
+		ref_str='; '.join([x[0]+x.split('+')[-1] for x in self.reference.split('; ')])
+		# ref_str='\citet{'+'}; \citet{'.join([x.split('+')[0]+x.split('+')[-1] for x in self.reference.split('; ')])+'}'
+		out_str=i_str+err_str+'$\t&\t'+ref_str
+		return out_str
 
 	
 def weighted_mean(x,errors):
@@ -207,6 +221,16 @@ class Source():
 				print str(refl.inclination)+'+'+str(refl.error[0])+'-'+str(refl.error[1]), refl.reference
 		else:
 			print 'Reflection not loaded'
+
+	def print_latex(self):
+		# print self.n_ufos
+		for i,ufo in enumerate(self.ufos):
+			if i==0:
+				print self.name+'\t&\t'+ufo.latex_print()+'\t&\t'+self.reflection.latex_print()+'\\\\'
+			else:
+				print '\t&\t'+ufo.latex_print()+'\\\\'
+
+
 
 
 def load_data(filename,delimiter='\t',skiprows=2):
