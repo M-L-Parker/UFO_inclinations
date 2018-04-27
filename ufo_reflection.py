@@ -369,7 +369,7 @@ def plot_relation(sources,filename='UFO_relation.pdf'):
 	# print 'Saved to',filename	
 
 def load_sources(data_file):
-	ufo_data=load_data('data.tsv')
+	ufo_data=load_data(data_file)
 	source_names=get_sourcenames(ufo_data)
 	
 	# Define a Source object for each source name
