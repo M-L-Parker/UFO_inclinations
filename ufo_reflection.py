@@ -98,7 +98,7 @@ def weighted_mean(x,errors):
 
 class Source():
 	"""Class for holding info on a given AGN"""
-	def __init__(self, name, ufo_velocity_threshold=0.01):
+	def __init__(self, name, ufo_velocity_threshold=0.033):
 		# super(Source, self).__init__()
 		self.name = name
 		self.ufos=[]
