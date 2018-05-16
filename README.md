@@ -7,4 +7,6 @@ Start with the Jupyter notebooks for the [correlation analysis](https://github.c
 
 The complete list of outflows and reflection measurements used is contained in data.tsv.
 
+relline_blueshift.py is used to get the maximum blueshifts from the relline model (Dauser et al., 2010) using pyxspec. The resulting values are saved in relline_velocity_array.dat
+
 A note of caution: This study is intended as proof of concept. The data are very biased, and likely to contain large systematic errors. The models we examine are extremely simple. Handle with care.
